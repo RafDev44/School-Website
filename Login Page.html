@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question Vault</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at center,#243B55 0%,#0B1220 70%);
+    overflow:hidden;
+}
+
+/* Floating particles */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:60px 60px;
+    opacity:0.08;
+    animation:moveParticles 30s linear infinite;
+}
+
+@keyframes moveParticles{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-200px);
+    }
+
+}
+
+/* Login Card */
+
+.card{
+
+    width:380px;
+
+    padding:45px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.18);
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeUp 1s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.icon{
+
+    font-size:50px;
+    margin-bottom:10px;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+h1{
+
+    font-family:'Cinzel',serif;
+    letter-spacing:2px;
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    color:#d9d9d9;
+    font-size:14px;
+    margin-bottom:30px;
+
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,0.12);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+input::placeholder{
+
+    color:#cccccc;
+
+}
+
+input:focus{
+
+    border:1px solid gold;
+
+    box-shadow:0 0 15px rgba(255,215,0,.45);
+
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    background:gold;
+
+    color:#222;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(255,215,0,.4);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+.footer{
+
+    margin-top:25px;
+
+    color:#cfcfcf;
+
+    font-size:13px;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<div class="icon">📚</div>
+
+<h1>QUESTION BANK</h1>
+
+<p class="subtitle">
+Knowledge never expires.
+</p>
+
+<input
+type="text"
+placeholder="👤 Student ID">
+
+<input
+type="password"
+placeholder="🔒 Password">
+
+<button>
+🔓 Unlock Archive
+</button>
+
+<p class="footer">
+© 2026 Dehli Public School Newtown.<br>All rights reserved.
+</p>
+
+</div>
+
+</body>
+</html>
